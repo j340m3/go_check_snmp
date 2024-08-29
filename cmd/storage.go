@@ -22,30 +22,30 @@ var storageCmd = &cobra.Command{
 
 // SNMP Datas
 
-const storage_table= "1.3.6.1.2.1.25.2.3.1"
+const storage_table = "1.3.6.1.2.1.25.2.3.1"
 const storagetype_table = "1.3.6.1.2.1.25.2.3.1.2"
 const index_table = "1.3.6.1.2.1.25.2.3.1.1"
 const descr_table = "1.3.6.1.2.1.25.2.3.1.3"
-const size_table = "1.3.6.1.2.1.25.2.3.1.5.";
+const size_table = "1.3.6.1.2.1.25.2.3.1.5."
+
 const used_table = "1.3.6.1.2.1.25.2.3.1.6."
 const alloc_units = "1.3.6.1.2.1.25.2.3.1.4."
 
-//Storage types definition  - from /usr/share/snmp/mibs/HOST-RESOURCES-TYPES.txt
+// Storage types definition  - from /usr/share/snmp/mibs/HOST-RESOURCES-TYPES.txt
 var hrStorage = map[string]string{
-	"Other" : "1.3.6.1.2.1.25.2.1.1",
-	"1.3.6.1.2.1.25.2.1.1" : "Other",
-	"Ram" : "1.3.6.1.2.1.25.2.1.2",
-	"1.3.6.1.2.1.25.2.1.2" : "Ram",
-	"VirtualMemory" : "1.3.6.1.2.1.25.2.1.3",
-	"1.3.6.1.2.1.25.2.1.3" : "VirtualMemory",
-	"FixedDisk" : "1.3.6.1.2.1.25.2.1.4",
-	"1.3.6.1.2.1.25.2.1.4" : "FixedDisk",
-	"RemovableDisk" : "1.3.6.1.2.1.25.2.1.5",
+	"Other":                "1.3.6.1.2.1.25.2.1.1",
+	"1.3.6.1.2.1.25.2.1.1": "Other",
+	"Ram":                  "1.3.6.1.2.1.25.2.1.2",
+	"1.3.6.1.2.1.25.2.1.2": "Ram",
+	"VirtualMemory":        "1.3.6.1.2.1.25.2.1.3",
+	"1.3.6.1.2.1.25.2.1.3": "VirtualMemory",
+	"FixedDisk":            "1.3.6.1.2.1.25.2.1.4",
+	"1.3.6.1.2.1.25.2.1.4": "FixedDisk",
+	"RemovableDisk":        "1.3.6.1.2.1.25.2.1.5",
+	"1.3.6.1.2.1.25.2.1.5": "RemovableDisk",
 }
 
-
-
-$hrStorage{"1.3.6.1.2.1.25.2.1.5"} = 'RemovableDisk';
+/*
 $hrStorage{"FloppyDisk"} = '1.3.6.1.2.1.25.2.1.6';
 $hrStorage{"1.3.6.1.2.1.25.2.1.6"} = 'FloppyDisk';
 $hrStorage{"CompactDisk"} = '1.3.6.1.2.1.25.2.1.7';
@@ -56,7 +56,7 @@ $hrStorage{"FlashMemory"} = '1.3.6.1.2.1.25.2.1.9';
 $hrStorage{"1.3.6.1.2.1.25.2.1.9"} = 'FlashMemory';
 $hrStorage{"NetworkDisk"} = '1.3.6.1.2.1.25.2.1.10';
 $hrStorage{"1.3.6.1.2.1.25.2.1.10"} = 'NetworkDisk';
-
+*/
 func init() {
 	//descriptionCmd.Flags().StringP("validate", "R", "", "regexp to validate the snmp description")
 	descriptionCmd.Flags().StringVarP(&warn, "warn", "w", "", "warning threshold")
