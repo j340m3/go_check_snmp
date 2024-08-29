@@ -43,10 +43,11 @@ var hrStorage = map[string]string{
 	"1.3.6.1.2.1.25.2.1.4": "FixedDisk",
 	"RemovableDisk":        "1.3.6.1.2.1.25.2.1.5",
 	"1.3.6.1.2.1.25.2.1.5": "RemovableDisk",
+	"FloppyDisk":           "1.3.6.1.2.1.25.2.1.6",
 }
 
 /*
-$hrStorage{"FloppyDisk"} = '1.3.6.1.2.1.25.2.1.6';
+$hrStorage{} = ;
 $hrStorage{"1.3.6.1.2.1.25.2.1.6"} = 'FloppyDisk';
 $hrStorage{"CompactDisk"} = '1.3.6.1.2.1.25.2.1.7';
 $hrStorage{"1.3.6.1.2.1.25.2.1.7"} = 'CompactDisk';
